@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: dataset/wineqt.csv
+      md5: d3b9b5d38dbc15757c3ab17974f7079b
+      size: 78055
+    - path: src/get_data.py
+      md5: 3443e77b92b51441e1a9dfc51b911aa2
+      size: 631
+    - path: src/load_data.py
+      md5: b032ffe9ca0c230ac706d9d5c8917707
+      size: 591
+    outs:
+    - path: data/raw/wineqt.csv
+      md5: 928a3899cf30e454051988a983c38c6e
+      size: 72970
