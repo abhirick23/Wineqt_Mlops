@@ -42,4 +42,8 @@ jobs:
       if: github.ref == 'refs/heads/main' && job.status == 'success'
       run: |
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
+<<<<<<< HEAD
         git push heroku HEAD:main -f
+=======
+        git push heroku HEAD:main -f
+>>>>>>> 8cee48f43f361a825f5d5205b12e48a415b1e193
